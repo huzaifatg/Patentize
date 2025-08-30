@@ -55,7 +55,7 @@
   },
   "scripts": {
     "start": "vite",
-    "generate:app-clients": "algokit project link --all",
+    "generate:app-clients": "npx algokit project link --all",
     "dev": "npm run generate:app-clients && vite",
     "build": "npm run generate:app-clients && tsc && vite build",
     "test": "jest --coverage --passWithNoTests",
