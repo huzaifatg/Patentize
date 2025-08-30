@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Global Styles === */
+body {
+  @apply bg-gray-50 text-gray-900 font-sans;
+}
+
+/* === Navigation Bar === */
+nav {
+  @apply bg-indigo-700 text-white p-4 flex justify-between items-center shadow-lg;
+}
+
+nav a {
+  @apply px-4 py-2 text-white hover:bg-indigo-800 rounded transition;
+}
+
+/* === Container & Card Styling === */
+.container {
+  @apply max-w-7xl mx-auto p-6;
+}
+
+.card {
+  @apply bg-white p-6 shadow-md rounded-lg border border-gray-200;
+}
+
+/* === Buttons === */
+.btn-primary {
+  @apply bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-800 transition;
+}
+
+.btn-secondary {
+  @apply bg-gray-300 text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-400 transition;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition;
+}
+
+/* === Input Fields === */
+.input-field {
+  @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500;
+}
+
+/* === Dashboard Overview === */
+.dashboard-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.stat-card {
+  @apply bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-6 rounded-lg shadow-md;
+}
+
+/* === Marketplace === */
+.marketplace-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.asset-card {
+  @apply bg-white p-4 shadow-lg rounded-lg border border-gray-300;
+}
+
+/* === Transactions === */
+.transaction-table {
+  @apply w-full border-collapse border border-gray-300 mt-4;
+}
+
+.transaction-table th,
+.transaction-table td {
+  @apply border border-gray-300 p-3;
+}
+
+.transaction-table th {
+  @apply bg-gray-200;
+}
+
+/* === Profile === */
+.profile-container {
+  @apply bg-white p-6 rounded-lg shadow-md max-w-3xl mx-auto;
+}
+
+/* === Notification Alerts === */
+.alert {
+  @apply p-4 rounded-md shadow-md;
+}
+
+.alert-success {
+  @apply bg-green-500 text-white;
+}
+
+.alert-warning {
+  @apply bg-yellow-500 text-white;
+}
+
+.alert-error {
+  @apply bg-red-500 text-white;
+}
+
+/* === Royalty Distribution === */
+.royalty-container {
+  @apply max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md;
+}
+
+/* ================= */
+/* WALLET CONNECTION */
+/* ================= */
+
+/* === Wallet Modal === */
+.modal {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center;
+}
+
+.modal-box {
+  @apply bg-white p-6 rounded-lg shadow-lg w-96;
+}
+
+.modal-action {
+  @apply flex justify-end space-x-2;
+}
+
+/* === Wallet Buttons === */
+.wallet-btn {
+  @apply flex items-center space-x-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-800 transition;
+}
+
+.wallet-btn img {
+  @apply w-6 h-6;
+}
+
+/* === Wallet Connection Styling === */
+
+/* Main container for wallet selection */
+.wallet-container {
+  @apply flex flex-col items-center justify-center min-h-screen bg-gray-100 p-8 max-w-md mx-auto rounded-lg shadow-lg;
+}
+
+/* Title/Header for wallet connection */
+.wallet-header {
+  @apply text-3xl font-semibold text-gray-800 mb-8 text-center;
+}
+
+/* Container for wallet selection buttons */
+.wallet-buttons {
+  @apply grid grid-cols-1 gap-6 mb-6;
+}
+
+/* Common button styling for wallet selection */
+.wallet-button {
+  @apply flex items-center justify-start space-x-4 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-800 transition-all duration-200 ease-in-out w-full shadow-md;
+}
+
+.wallet-button img {
+  @apply w-8 h-8;
+}
+
+.wallet-button:disabled {
+  @apply bg-gray-400 cursor-not-allowed;
+}
+
+/* Styling for the main connect wallet button */
+.connect-wallet-btn {
+  @apply bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-200 ease-in-out w-full shadow-md;
+}
+
+.connect-wallet-btn:disabled {
+  @apply bg-gray-300 cursor-not-allowed;
+}
+
+/* === Account Page === */
+.account-container {
+  @apply text-center p-6;
+}
+
+.account-link {
+  @apply text-indigo-500 underline hover:text-indigo-700;
+}
+
+.network-info {
+  @apply text-lg font-semibold mt-2;
+}
+
+/* === Smart Contract Call Modal === */
+.contract-modal {
+  @apply bg-white p-6 rounded-lg shadow-lg w-96;
+}
+
+.contract-input {
+  @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500;
+}
+
+/* === Error Boundary === */
+.error-container {
+  @apply flex flex-col justify-center items-center min-h-screen bg-teal-400;
+}
+
+.error-box {
+  @apply bg-white p-6 rounded-lg shadow-md text-center;
+}
+
+.error-title {
+  @apply text-4xl font-bold;
+}
+
+.error-message {
+  @apply text-lg mt-4;
+}
+
+/* === Responsive Design === */
+
+/* Small screens (max-width: 640px) */
+@media screen and (max-width: 640px) {
+  nav {
+    @apply flex-col items-center;
+  }
+
+  .container {
+    @apply px-4;
+  }
+
+  .dashboard-grid,
+  .marketplace-grid {
+    @apply grid-cols-1;
+  }
+
+  .stat-card {
+    @apply text-center;
+  }
+
+  .transaction-table th,
+  .transaction-table td {
+    @apply text-sm px-2 py-1;
+  }
+
+  .wallet-container {
+    @apply p-4;
+  }
+
+  .wallet-header {
+    @apply text-2xl;
+  }
+
+  .wallet-button {
+    @apply text-sm px-4 py-2;
+  }
+
+  .modal-box {
+    @apply w-full mx-4;
+  }
+
+  .connect-wallet-btn {
+    @apply text-sm px-6 py-2;
+  }
+}
+
+/* Medium screens (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .dashboard-grid {
+    @apply grid-cols-2;
+  }
+
+  .marketplace-grid {
+    @apply grid-cols-2;
+  }
+
+  .wallet-container {
+    @apply max-w-lg;
+  }
+
+  .wallet-button {
+    @apply text-base;
+  }
+
+  .connect-wallet-btn {
+    @apply text-base;
+  }
+
+  .modal-box {
+    @apply w-80;
+  }
+}
+
+/* Large screens (max-width: 1280px) */
+@media screen and (max-width: 1280px) {
+  .dashboard-grid {
+    @apply grid-cols-3;
+  }
+
+  .marketplace-grid {
+    @apply grid-cols-3;
+  }
+}
